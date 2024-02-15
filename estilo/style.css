@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #88a9df;
+}
+
+.logo {
+    float: left;
+    margin: 0.3125rem;
+}
+
+.campo__texto {
+    overflow-wrap: break-word;
+    word-break: break-all;
+    background-color: #88a9df;
+    padding-left: 50px;
+    gap: 1rem;
+    width: 750px;
+    height: 600px;
+    float: left;
+    color: aliceblue;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    outline: none;
+    border: none;
+    resize: none;    
+}
+
+::placeholder {
+    color:aliceblue;
+}
+
+button {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    background: none;
+    color: #e1e1e1;
+    outline: none;
+}
+
+button:focus,
+button:hover {
+    color: #fff;
+}
+
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.titulo__principal {
+    font-size: 1.8rem;
+    color: aliceblue;
+    max-width: calc(100vw - 50px); /* Largura máxima igual à largura da tela menos a margem */
+    padding-right: 0; /* Removido o padding-right */
+}
+
+.mensagem__inicial,
+.submensagem__inicial {
+    position: flex;
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+.mensagem__inicial {
+    top: 38%;
+    right: 18%;
+    z-index: 1;
+    font-weight: 700;
+    text-align: center;
+}
+
+.submensagem__inicial {
+    top: 47%;
+    right: 14.9%;
+    z-index: 1;
+    opacity: 0.8; 
+    font-size: 18px;
+    text-align: center;
+}
+
+.botao__crip {
+    position: absolute;
+    float: left;
+    top: 60%; 
+    left: 5%;
+}
+
+.botao__descrip {
+    position: absolute;
+    float: left;
+    top: 60%; 
+    left: 18.5%;
+}
+
+.botao__copiar {
+    
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    padding: 17px;
+    display: block;
+    position: absolute;
+    top: 5%; /* Ajuste conforme necessário */
+    right: 20.5%; /* Ajuste conforme necessário */
+}
+
+.botao__limpar {
+    position: absolute;
+    float: left;
+    top: 60%; 
+    left: 35%;
+}
+
+.campo__crip {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    width: 80%;
+    float: right;
+    margin-right: 45px;
+    word-wrap: break-word;
+    background-color: #034a8d;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 40%;
+    min-height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-family: "Protest Guerrilla", sans-serif 400 normal;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 375px) and (min-height: 933px) {
+    body {
+        overflow-x: hidden; /* Oculta o overflow horizontal */
+        margin: 0 auto; /* Centraliza a página horizontalmente */
+    }
+    
+    .logo {
+        margin-top: 25px;
+    }
+
+    .titulo__principal {
+        max-width: calc(100% - 20px); /* Ajuste o valor conforme necessário para manter o título dentro da margem */
+        font-size: 1rem;
+        position: relative; /* Alterado de flex para relative */
+        right: 2px;
+        left: 1px;
+        top: 30px; /* Ajuste o valor conforme necessário para descer o título */
+    }
+    .campo__texto {
+        width: 80%; /* Defina a largura do campo de inserção de texto conforme necessário */
+        max-height: 40%;
+        max-height: 300px;
+        margin: 30px auto;
+        padding: 0 10%;
+        font-size: 1.4rem;
+    }
+
+    /* Botão resetado */
+    button{
+        font-family: inherit; /* Retorna à fonte padrão do navegador */
+        font-weight: normal; /* Retorna ao peso da fonte padrão */
+        font-size: 1rem; /* Retorna ao tamanho de fonte padrão */
+        padding: 0.8em 1em; /* Retorna ao preenchimento padrão */
+        margin: 5px; /* Remove a margem */
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid #034a8d; /* Adiciona uma borda simples */
+        background-color: #034a8d; /* Remove o fundo */
+        color: white; /* Define a cor do texto */
+        outline: none;
+    }
+    
+    button:focus,
+    button:hover {
+        /* Remove todos os estilos de foco e hover */
+        color: white; /* Define a cor do texto */
+        border-color: #034a8d; /* Define a cor da borda */
+    }
+    
+    button:after {
+        /* Remove qualquer pseudo-elemento adicional */
+        content: none;
+    }
+    
+    ::placeholder {
+        font-size: 1.5rem;
+    }
+    
+    .campo__crip {
+        width: 95%;
+        max-width: none;
+        min-height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 50% 2% 2% 100px;
+        padding: 0;
+        box-sizing: border-box;
+        flex-direction: column; /* Alterando a direção do flexbox para empilhar os itens verticalmente */
+    }
+    
+    .texto__crip {
+        padding: 10px;
+        max-width: 90%;
+        font-size: 1rem;
+        overflow-wrap: break-word; /* Quebrará as palavras */
+        word-wrap: break-word; /* Para navegadores antigos */
+    }
+    
+    
+    .botao__crip {
+        position: flex;
+        float: left;
+        top: 55%;
+        left: 1px; 
+        
+    }
+    
+    .botao__descrip{
+        position: flex;
+        float: right;
+        top: 55%; 
+        left: 34%;
+        margin-right: 10px;
+    }
+    
+    .botao__limpar {
+        position: flex;
+        float: center;
+        top: 55%; 
+        left: 74.8%;
+        margin-right: 10px;
+    }
+    
+    .botao__copiar {
+        position: absolute;
+        right: 8px;
+        padding: 0.5em 1em;
+        margin: 0;
+        top: 45%;
+        
+    }
+    
+    
+    .mensagem__inicial {
+       position: absolute;
+        top: -10%; 
+        right: 27%;
+        font-size: 1rem;
+        text-align: center; /* Alinhando o texto ao centro */
+    }
+  
+    
+
+    .submensagem__inicial {
+       position: absolute;
+        top: 10%; 
+        right: 12%;
+        font-size: 0.8rem;
+        white-space: pre-line; /* Isso permite que a quebra de linha seja renderizada */
+    }
+    .rodape {
+        margin: 0;
+        background-color: #333;
+        color: #fff;
+        clear: both; /* Limpa elementos flutuantes */
+        width: 100%; /* Ocupa toda a largura da tela */
+        text-align: auto;
+        font-family: "Protest Guerrilla", sans-serif 400 normal;
+        font-size: 1rem;
+    }
+     
+}
+
